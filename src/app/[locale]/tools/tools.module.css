@@ -1,0 +1,465 @@
+.page {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.pageHeader {
+    margin-bottom: var(--space-lg);
+}
+
+.pageTitle {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.pageTitle .material-symbols-rounded {
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.pageDesc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+}
+
+/* === Card === */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+/* === Textarea === */
+.textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-primary);
+    resize: vertical;
+    line-height: 1.6;
+    transition: border-color var(--transition-fast);
+}
+
+.textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* === Input === */
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast);
+}
+
+.input::placeholder {
+    color: var(--text-muted);
+}
+
+.input:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* === Button === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    font-weight: 500;
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.btnPrimary {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.btnPrimary:hover {
+    background: var(--accent-hover);
+}
+
+.btnSecondary {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+.btnSecondary:hover {
+    background: var(--bg-hover);
+}
+
+.btnSmall {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 12px;
+}
+
+/* === Actions row === */
+.actions {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+/* === Stats === */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+}
+
+.statItem {
+    text-align: center;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.statValue {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.statLabel {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+}
+
+/* === Split view === */
+.splitView {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+/* === Status === */
+.statusValid {
+    font-size: 12px;
+    color: var(--success);
+    font-weight: 500;
+}
+
+.statusError {
+    font-size: 12px;
+    color: var(--error);
+    font-weight: 500;
+}
+
+/* === Color swatch === */
+.colorSwatch {
+    width: 100%;
+    height: 80px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.colorRow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+}
+
+/* === Timer === */
+.timerDisplay {
+    font-family: var(--font-mono);
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--accent);
+    text-align: center;
+    padding: var(--space-xl) 0;
+}
+
+.timerModes {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.timerActions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+/* === Preview === */
+.preview {
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    min-height: 200px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.preview h1,
+.preview h2,
+.preview h3 {
+    margin: var(--space-md) 0 var(--space-sm);
+    font-family: var(--font-mono);
+}
+
+.preview h1 {
+    font-size: 24px;
+}
+
+.preview h2 {
+    font-size: 20px;
+}
+
+.preview h3 {
+    font-size: 16px;
+}
+
+.preview p {
+    margin-bottom: var(--space-sm);
+}
+
+.preview code {
+    background: var(--bg-hover);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+.preview pre {
+    background: var(--bg-hover);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+}
+
+.preview pre code {
+    background: none;
+    padding: 0;
+}
+
+.preview ul,
+.preview ol {
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+}
+
+.preview blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: var(--space-md);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+/* === Match highlight === */
+.matchHighlight {
+    background: var(--accent-subtle);
+    border-bottom: 2px solid var(--accent);
+    padding: 1px 0;
+}
+
+/* === Diff === */
+.diffAdded {
+    background: rgba(22, 163, 74, 0.1);
+    border-left: 3px solid var(--success);
+    padding: 2px var(--space-sm);
+}
+
+.diffRemoved {
+    background: rgba(220, 38, 38, 0.1);
+    border-left: 3px solid var(--error);
+    padding: 2px var(--space-sm);
+}
+
+.diffLine {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+/* === UUID list === */
+.uuidList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.uuidItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 13px;
+}
+
+/* === Palette === */
+.paletteSection {
+    margin-top: var(--space-lg);
+}
+
+.paletteLabel {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+}
+
+.paletteColors {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.paletteSwatch {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.paletteSwatch:hover {
+    transform: scale(1.05);
+}
+
+.paletteHex {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: var(--space-xs);
+}
+
+/* === Calculator === */
+.calcDisplay {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md) var(--space-lg);
+    text-align: right;
+    margin-bottom: var(--space-md);
+}
+
+.calcExpression {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    min-height: 20px;
+}
+
+.calcValue {
+    font-family: var(--font-mono);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    word-break: break-all;
+}
+
+.calcGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+}
+
+.calcBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 500;
+    transition: background var(--transition-fast);
+}
+
+.calcBtnNum {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.calcBtnNum:hover {
+    background: var(--bg-hover);
+}
+
+.calcBtnOp {
+    background: var(--accent-subtle);
+    color: var(--accent);
+}
+
+.calcBtnOp:hover {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.calcBtnEqual {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.calcBtnEqual:hover {
+    background: var(--accent-hover);
+}
+
+.calcBtnWide {
+    grid-column: span 2;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .splitView {
+        grid-template-columns: 1fr;
+    }
+
+    .timerDisplay {
+        font-size: 48px;
+    }
+
+    .calcBtn {
+        height: 48px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}

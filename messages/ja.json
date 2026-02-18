@@ -1,0 +1,129 @@
+{
+  "siteName": "markers",
+  "nav": {
+    "home": "ホーム",
+    "basic": "基本ツール",
+    "text": "テキスト",
+    "color": "カラー",
+    "dev": "開発",
+    "productivity": "生産性",
+    "search": "ツールを検索"
+  },
+  "theme": {
+    "auto": "自動",
+    "light": "ライト",
+    "dark": "ダーク"
+  },
+  "common": {
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "clear": "クリア",
+    "download": "ダウンロード",
+    "input": "入力",
+    "output": "出力",
+    "encode": "エンコード",
+    "decode": "デコード",
+    "format": "整形",
+    "minify": "ミニファイ",
+    "generate": "生成",
+    "reset": "リセット",
+    "start": "スタート",
+    "stop": "ストップ",
+    "result": "結果",
+    "error": "エラー",
+    "valid": "有効",
+    "invalid": "無効"
+  },
+  "tools": {
+    "calculator": {
+      "name": "電卓",
+      "desc": "基本的な四則演算"
+    },
+    "charCounter": {
+      "name": "文字数カウンター",
+      "desc": "文字数・単語数・行数をカウント",
+      "chars": "文字数",
+      "words": "単語数",
+      "lines": "行数",
+      "bytes": "バイト数",
+      "placeholder": "テキストを入力..."
+    },
+    "base64": {
+      "name": "Base64 変換",
+      "desc": "テキストとBase64の変換",
+      "inputPlaceholder": "テキストを入力...",
+      "outputPlaceholder": "結果がここに表示されます"
+    },
+    "jsonFormatter": {
+      "name": "JSON 整形",
+      "desc": "JSONの整形・検証",
+      "inputPlaceholder": "JSONを入力...",
+      "outputPlaceholder": "整形結果がここに表示されます"
+    },
+    "colorPicker": {
+      "name": "カラーピッカー",
+      "desc": "HEX / RGB / HSLの変換",
+      "hex": "HEX",
+      "rgb": "RGB",
+      "hsl": "HSL"
+    },
+    "palette": {
+      "name": "パレット生成",
+      "desc": "配色パレットの自動生成",
+      "baseColor": "ベースカラー",
+      "complementary": "補色",
+      "analogous": "類似色",
+      "triadic": "トライアド",
+      "shades": "シェード"
+    },
+    "regex": {
+      "name": "正規表現テスター",
+      "desc": "正規表現のテスト・マッチ確認",
+      "pattern": "パターン",
+      "flags": "フラグ",
+      "testString": "テスト文字列",
+      "matches": "マッチ結果",
+      "noMatch": "マッチなし"
+    },
+    "diff": {
+      "name": "Diff 比較",
+      "desc": "2つのテキストの差分を表示",
+      "original": "元テキスト",
+      "modified": "変更テキスト",
+      "compare": "比較"
+    },
+    "uuid": {
+      "name": "UUID 生成",
+      "desc": "UUID v4の生成",
+      "generateOne": "1つ生成",
+      "generateBulk": "一括生成",
+      "count": "件数",
+      "history": "履歴",
+      "copyAll": "全てコピー"
+    },
+    "pomodoro": {
+      "name": "ポモドーロタイマー",
+      "desc": "集中と休憩のタイマー",
+      "focus": "集中",
+      "shortBreak": "小休憩",
+      "longBreak": "大休憩",
+      "sessions": "セッション"
+    },
+    "notepad": {
+      "name": "メモ帳",
+      "desc": "自動保存のシンプルメモ",
+      "placeholder": "メモを入力...",
+      "autosaved": "自動保存済み",
+      "chars": "文字",
+      "lines": "行"
+    },
+    "markdown": {
+      "name": "Markdown プレビュー",
+      "desc": "Markdownのリアルタイムプレビュー",
+      "editor": "エディター",
+      "preview": "プレビュー",
+      "placeholder": "# ここにMarkdownを入力...",
+      "copyHtml": "HTMLをコピー"
+    }
+  }
+}

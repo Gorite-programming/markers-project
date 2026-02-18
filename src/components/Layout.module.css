@@ -1,0 +1,221 @@
+.layout {
+    min-height: 100vh;
+}
+
+/* === Header === */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-md);
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    gap: var(--space-md);
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    transition: background var(--transition-fast);
+}
+
+.menuButton:hover {
+    background: var(--bg-hover);
+}
+
+.logo {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.headerCenter {
+    flex: 1;
+    max-width: 400px;
+}
+
+.searchWrapper {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.searchInput {
+    width: 100%;
+    height: 36px;
+    padding: 0 var(--space-sm) 0 36px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    color: var(--text-primary);
+    transition: border-color var(--transition-fast);
+}
+
+.searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+.searchInput:focus {
+    border-color: var(--accent);
+}
+
+.searchDropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    z-index: 200;
+}
+
+.searchItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    font-size: 13px;
+    color: var(--text-primary);
+    text-align: left;
+    transition: background var(--transition-fast);
+}
+
+.searchItem:hover {
+    background: var(--bg-hover);
+}
+
+.searchItem .material-symbols-rounded {
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+/* === Sidebar === */
+.overlay {
+    position: fixed;
+    inset: 0;
+    top: var(--header-height);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 49;
+}
+
+.sidebar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+}
+
+.sidebarOpen {
+    transform: translateX(0);
+}
+
+.nav {
+    padding: var(--space-sm);
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: 13px;
+    color: var(--text-secondary);
+    transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.navItem:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.navItem .material-symbols-rounded {
+    font-size: 18px;
+}
+
+.navActive {
+    background: var(--accent-subtle);
+    color: var(--accent);
+}
+
+.navGroup {
+    margin-top: var(--space-md);
+}
+
+.navLabel {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: var(--font-mono);
+}
+
+/* === Main === */
+.main {
+    margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+/* === Responsive === */
+@media (max-width: 640px) {
+    .headerCenter {
+        display: none;
+    }
+
+    .content {
+        padding: var(--space-md);
+    }
+}

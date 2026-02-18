@@ -1,0 +1,33 @@
+.switcher {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+    padding: 2px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-full);
+    color: var(--text-muted);
+    transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.btn:hover {
+    color: var(--text-primary);
+}
+
+.btn .material-symbols-rounded {
+    font-size: 18px;
+}
+
+.active {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+}

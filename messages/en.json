@@ -1,0 +1,129 @@
+{
+    "siteName": "markers",
+    "nav": {
+        "home": "Home",
+        "basic": "Basic",
+        "text": "Text",
+        "color": "Color",
+        "dev": "Developer",
+        "productivity": "Productivity",
+        "search": "Search tools"
+    },
+    "theme": {
+        "auto": "Auto",
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "common": {
+        "copy": "Copy",
+        "copied": "Copied",
+        "clear": "Clear",
+        "download": "Download",
+        "input": "Input",
+        "output": "Output",
+        "encode": "Encode",
+        "decode": "Decode",
+        "format": "Format",
+        "minify": "Minify",
+        "generate": "Generate",
+        "reset": "Reset",
+        "start": "Start",
+        "stop": "Stop",
+        "result": "Result",
+        "error": "Error",
+        "valid": "Valid",
+        "invalid": "Invalid"
+    },
+    "tools": {
+        "calculator": {
+            "name": "Calculator",
+            "desc": "Basic arithmetic calculator"
+        },
+        "charCounter": {
+            "name": "Character Counter",
+            "desc": "Count characters, words, and lines",
+            "chars": "Characters",
+            "words": "Words",
+            "lines": "Lines",
+            "bytes": "Bytes",
+            "placeholder": "Type or paste text..."
+        },
+        "base64": {
+            "name": "Base64 Converter",
+            "desc": "Encode and decode Base64 text",
+            "inputPlaceholder": "Enter text...",
+            "outputPlaceholder": "Result will appear here"
+        },
+        "jsonFormatter": {
+            "name": "JSON Formatter",
+            "desc": "Format and validate JSON",
+            "inputPlaceholder": "Paste JSON here...",
+            "outputPlaceholder": "Formatted result will appear here"
+        },
+        "colorPicker": {
+            "name": "Color Picker",
+            "desc": "Convert between HEX / RGB / HSL",
+            "hex": "HEX",
+            "rgb": "RGB",
+            "hsl": "HSL"
+        },
+        "palette": {
+            "name": "Palette Generator",
+            "desc": "Generate color palettes",
+            "baseColor": "Base Color",
+            "complementary": "Complementary",
+            "analogous": "Analogous",
+            "triadic": "Triadic",
+            "shades": "Shades"
+        },
+        "regex": {
+            "name": "Regex Tester",
+            "desc": "Test regular expressions",
+            "pattern": "Pattern",
+            "flags": "Flags",
+            "testString": "Test string",
+            "matches": "Matches",
+            "noMatch": "No match"
+        },
+        "diff": {
+            "name": "Diff Viewer",
+            "desc": "Compare two texts side by side",
+            "original": "Original",
+            "modified": "Modified",
+            "compare": "Compare"
+        },
+        "uuid": {
+            "name": "UUID Generator",
+            "desc": "Generate UUID v4",
+            "generateOne": "Generate One",
+            "generateBulk": "Bulk Generate",
+            "count": "Count",
+            "history": "History",
+            "copyAll": "Copy All"
+        },
+        "pomodoro": {
+            "name": "Pomodoro Timer",
+            "desc": "Focus and break timer",
+            "focus": "Focus",
+            "shortBreak": "Short Break",
+            "longBreak": "Long Break",
+            "sessions": "Sessions"
+        },
+        "notepad": {
+            "name": "Notepad",
+            "desc": "Simple notepad with auto-save",
+            "placeholder": "Start typing...",
+            "autosaved": "Auto-saved",
+            "chars": "chars",
+            "lines": "lines"
+        },
+        "markdown": {
+            "name": "Markdown Preview",
+            "desc": "Live Markdown preview",
+            "editor": "Editor",
+            "preview": "Preview",
+            "placeholder": "# Type Markdown here...",
+            "copyHtml": "Copy HTML"
+        }
+    }
+}
