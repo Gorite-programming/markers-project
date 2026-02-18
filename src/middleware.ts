@@ -4,5 +4,6 @@ import { routing } from './i18n/routing';
 export default createMiddleware(routing);
 
 export const config = {
-    matcher: ['/', '/(ja|en)/:path*'],
+    // sitemap.xml と robots.txt、および静的ファイルを対象外にする
+    matcher: ['/((?!api|_next|_vercel|sitemap\\.xml|robots\\.txt|[\\w-]+\\.\\w+).*)']
 };
