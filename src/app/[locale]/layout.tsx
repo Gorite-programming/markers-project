@@ -14,6 +14,9 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
     title: { default: 'markers', template: '%s | markers' },
     description: 'A collection of useful tools',
+    verification: {
+        google: '5kEDEBa5sujnGomN2Fd4wuECVGq2pvHL7ECB-MTiBgU',
+    },
 };
 
 export default async function LocaleLayout({
