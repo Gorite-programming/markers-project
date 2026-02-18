@@ -1,13 +1,32 @@
-import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
+import { routing } from './i18n/routing'
 
-export default createMiddleware({
-    ...routing,
-    // 検索エンジンのクローラーへの干渉を防ぐため、リダイレクトをオフにする
-    localeDetection: false
-});
+const intlMiddleware = createMiddleware({
+  ...routing,
+  localeDetection: false
+})
+
+export default function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  // 🔥 sitemap / robots / 静的ファイルは完全スルー
+  if (
+    pathname === '/sitemap.xml' ||
+    pathname === '/robots.txt' ||
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_vercel') ||
+    pathname.includes('.')
+  ) {
+    return NextResponse.next()
+  }
+
+  // それ以外は next-intl に渡す
+  return intlMiddleware(request)
+}
 
 export const config = {
-    // sitemap.xml, robots.txt, favicon.ico および静的ファイルを完全に除外
-    matcher: ['/((?!api|_next|_vercel|[\\w-]+\\.\\w+).*)']
-};
+  matcher: ['/((?!api|_next|_vercel|[\\w-]+\\.\\w+).*)']
+}
