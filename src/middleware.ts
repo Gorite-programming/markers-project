@@ -3,11 +3,11 @@ import { routing } from './i18n/routing';
 
 export default createMiddleware({
     ...routing,
-    // ブラウザの言語設定による自動リダイレクトをオフにする（SEO上のトラブルを防ぐため）
+    // 検索エンジンのクローラーへの干渉を防ぐため、リダイレクトをオフにする
     localeDetection: false
 });
 
 export const config = {
-    // sitemap.xml, robots.txt, favicon.ico, および静的ファイルを完全に除外
+    // sitemap.xml, robots.txt, favicon.ico および静的ファイルを完全に除外
     matcher: ['/((?!api|_next|_vercel|[\\w-]+\\.\\w+).*)']
 };
