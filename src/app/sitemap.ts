@@ -2,7 +2,9 @@ import { MetadataRoute } from 'next';
 import { tools } from '@/lib/tools';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://markers-project.vercel.app';
-const locales = ['en', 'ja'];
+
+// ← これを追加！
+export const contentType = 'application/xml';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const routes = [
