@@ -1,4 +1,7 @@
+// src/app/sitemap.ts
 import { MetadataRoute } from 'next'
+
+export const revalidate = 0  // ← これ追加！キャッシュさせない
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
