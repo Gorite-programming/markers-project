@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+// src/middleware.ts
 import createMiddleware from 'next-intl/middleware'
 import { routing } from './i18n/routing'
+import { NextRequest } from 'next/server'
 
 const intlMiddleware = createMiddleware({
   ...routing,
@@ -11,24 +11,20 @@ const intlMiddleware = createMiddleware({
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // 🔥 sitemap / robots / 静的ファイルは完全スルー
+  // sitemap・robots・静的ファイルは完全スキップ
   if (
-    pathname === '/sitemap.xml' ||
-    pathname === '/robots.txt' ||
+    pathname.startsWith('/sitemap') ||
+    pathname.startsWith('/robots') ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
-    pathname.startsWith('/_vercel') ||
     pathname.includes('.')
   ) {
-    return NextResponse.next()
+    return  // ← NextResponse.next()じゃなくてreturnだけでOK
   }
 
-  // それ以外は next-intl に渡す
   return intlMiddleware(request)
 }
 
 export const config = {
-  matcher: [
-    '/((?!api|_next|_vercel|sitemap.xml|robots.txt|.*\\..*).*)'
-  ]
+  matcher: ['/(.*?)']  // ← 全パスにマッチさせて、上のif文で制御する
 }
