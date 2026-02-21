@@ -1,27 +1,35 @@
-// src/app/sitemap.ts
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { tools } from '@/lib/tools';
 
-export const revalidate = 0  // ← これ追加！キャッシュさせない
+const BASE_URL = 'https://markers-project.vercel.app';
+const locales = ['en', 'ja'];
+
+export const revalidate = 3600; // 1時間ごとに再生成
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://markers-project.vercel.app',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://markers-project.vercel.app/ja',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://markers-project.vercel.app/en',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-  ]
+    const sitemapEntries: MetadataRoute.Sitemap = [];
+
+    // トップページ (ja/en)
+    locales.forEach((locale) => {
+        sitemapEntries.push({
+            url: `${BASE_URL}/${locale}`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 1.0,
+        });
+    });
+
+    // 全ツールの個別ページ (ja/en)
+    tools.forEach((tool) => {
+        locales.forEach((locale) => {
+            sitemapEntries.push({
+                url: `${BASE_URL}/${locale}${tool.path}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.8,
+            });
+        });
+    });
+
+    return sitemapEntries;
 }
